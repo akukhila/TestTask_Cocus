@@ -12,7 +12,8 @@ export class LoginPageHelper {
         await this.page.getByRole('textbox', { name: "Email or account number" }).fill(username);
         await this.page.getByRole('textbox', { name: "Password" }).fill(password);
         await this.page.getByRole('button', { name: "Sign In" }).click();
-        await expect(this.page.getByTestId('my-account-link').last()).toBeVisible();
+        await expect(this.page.getByTestId('my-account-link').last()).toBeVisible();//assertion to check that user signed in, my account link is visible 
+        console.log("User signed in successfully.")
 
     }
 

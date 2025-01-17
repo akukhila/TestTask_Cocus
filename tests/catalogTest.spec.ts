@@ -8,6 +8,8 @@ test.beforeEach(async ({ page }) => {
 
 })
 
+/*The goal of the test is to login, add item to the bag and check that it is present in the bag*/
+
 test('Add product to the bag', async ({ page }) => {
     const pm = new PageManager(page);
     await pm.loginPage.login(process.env.MYUSERNAME, process.env.MYPASSWORD);

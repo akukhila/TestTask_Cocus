@@ -8,11 +8,16 @@ test.beforeEach(async ({ page }) => {
     await page.getByRole('button', { name: "Sign In" }).click();
 
 })
+
+/* The goal of the test is to login with correct credentials and check that user is loged in successfully*/
+
 test('Login with correct credentials', async ({ page }) => {
     const pm = new PageManager(page);
     await pm.loginPage.login(process.env.MYUSERNAME, process.env.MYPASSWORD);
 
 });
+
+/* The goal of the test is to log out and check taht user log out successfully*/
 
 test('Log out from your account', async ({ page }) => {
     const pm = new PageManager(page);
